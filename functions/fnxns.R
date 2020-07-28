@@ -19,3 +19,6 @@ calcGDP <- function(dat, year=NULL, country=NULL) {
   new <- cbind(dat, gdp=gdp)
   return(new)
 }
+
+
+

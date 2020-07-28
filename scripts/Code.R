@@ -69,3 +69,5 @@ m %*% m2
 
 ### Functions ###
 source("functions/fnxns.R")
+
+calcGDP(gapminder, year=2007, country="Australia")
