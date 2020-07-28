@@ -1,0 +1,74 @@
+---
+title: "knitR"
+author: "Bart Aben"
+date: "7/28/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+### Bulleted list:
+* bullet 1
+* bullet 2
+* bullet 3
+  + bullet 3a
+  + bullet 3b
+
+### Numbered list:
+1. step 1
+2. step 2
+3. step 3
+
+**bold**
+
+_italics_
+
+# Title
+## Main section
+### Sub-section
+#### Sub-sub section
+
+#### Hyperlink
+[hyperlink](http://www.tue.nl)
+
+#### Image
+![iamgeCaption](https://www.win.tue.nl/~opapapetrou/img/tue.png)
+
+#### Subscript
+F~2~
+
+#### Superscript
+F^2^
+
+#### Math equations
+$E = mc^2$
+$$y = \mu + \sum_{i=1}^p \beta_i x_i + \epsilon$$
+
+#### Block quote
+
+A friend once said:
+
+> It's always better to give 
+> than to receive.
+
+#### R code block
+```{r}
+summary(cars$dist) # What if I add this really looooooooooooooooooooooooooooooooooooooong line????????????????????????????
+summary(cars$speed)
+```
+
+#### Inline R Code
+There were `r nrow(cars)` cars studied
+
+#### Chunk options
+* Use `echo=FALSE` to avoid having the code itself shown.
+* Use `results="hide"` to avoid having any results printed.
+* Use `eval=FALSE` to have the code shown but not evaluated.
+* Use `warning=FALSE` and `message=FALSE` to hide any warnings or messages produced.
+* Use `fig.height` and `fig.width` to control the size of the figures produced (in inches).
+
+#### Global chunk options
+```{r global_options, echo=FALSE}
+knitr::opts_chunk$set(fig.path="Figs/", message=FALSE, warning=FALSE,
+                      echo=FALSE, results="hide", fig.width=11)
+```
