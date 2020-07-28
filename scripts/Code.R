@@ -48,5 +48,24 @@ for (c in unique(gapminder$country)){
   
 grep("^B", unique(gapminder$country), value=T)
 
+library(ggplot2)
+ggplot(data = gapminder, mapping = aes(x = gdpPercap, y = lifeExp)) +
+  geom_point(alpha = 0.5) + 
+  scale_x_log10() +
+  geom_smooth(method="lm")
 
 
+### Vectorization ###
+
+ggplot(data = gapminder[gapminder$country %in% c('China', 'India', 'Indonesia'),], mapping = aes(x= year, y = pop / 1e6))+
+  geom_point()
+
+# Matrix mulitplication
+m <- matrix(1:12, nrow=3, ncol=4)
+m
+m2 <- matrix(1:8, nrow=4, ncol=2)
+m2
+m %*% m2
+
+### Functions ###
+source("functions/fnxns.R")
